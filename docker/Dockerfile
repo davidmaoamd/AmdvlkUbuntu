@@ -11,6 +11,6 @@ RUN  mkdir drivers
 WORKDIR /amdvlk/drivers
 RUN  git clone https://github.com/GPUOpen-Drivers/AMDVLK.git -b master && git clone https://github.com/GPUOpen-Drivers/xgl.git -b master && git clone https://github.com/GPUOpen-Drivers/pal.git -b master && git clone https://github.com/GPUOpen-Drivers/llvm.git -b amd-vulkan-master
 WORKDIR /amdvlk/drivers/xgl
-RUN cmake -H. -Bbuilds/Release64
+RUN cmake3 -H. -Bbuilds/Release64
 WORKDIR /amdvlk/drivers/xgl/builds/Release64
 RUN  make -j`nproc`
